@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Color Brain Game: Challenge your color perception and reaction time with this captivating online game. Test your knowledge of color names and their matching hues in a race against the clock. How well do you know your colors? Find out now!">
+    <meta name="keywords" content="Color Brain Game, Color Perception Challenge, Online Reaction Game, Color Matching, Color Name Quiz, Brain Teaser Game, Test Reaction Time, Hues and Colors, Color Recognition, Color Knowledge Game">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Brain Game</title>
+</head>
+<body>
+    <div class="page">
+        <div class="color-container" id="color-container">
+            <div class="color-name">
+                <p class="color-font" id="current_color_name"></p>
+            </div>
+        </div>
+        <div class="controls-box">
+            <div class="button-container">
+                <button disabled class="button-font" id="button1" onclick="CheckAnswer(this.value)" value=""></button>
+                <button disabled class="button-font" id="button2" onclick="CheckAnswer(this.value)" value=""></button>
+            </div>
+        </div>
+        <div class="wrapper">
+            <p class="timerDisplay" style="color: aqua;font-size: 2rem;">00 : 00</p>
+        </div> 
+        <div class="play" id="play">
+            <button class="button-font" onclick="session()">Play</button>
+        </div>
+    </div>
+    <!-- Score Modal -->
+    <div style="display:none;" id="Modal" class="modal">
+        <div style="display:none;" class="fireworks-container" id="Fireworks">
+            <div class="pyro">
+                <div class="before"></div>
+                <div class="after"></div>
+            </div>
+        </div>
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="message-content"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
